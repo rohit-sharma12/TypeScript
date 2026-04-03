@@ -46,6 +46,7 @@ I revised the core primitive types in TypeScript:
 - `null`
 - `undefined`
 
+```ts
 Example:
 
 let userName: string = "Rohit";
@@ -60,6 +61,7 @@ unknown → Safer alternative to any
 void → Functions that don’t return anything
 never → Functions that never return (errors, infinite loops)
 
+```ts
 Example:
 
 function error(msg: string): never {
@@ -69,7 +71,7 @@ function error(msg: string): never {
 ## 4. Basic Object Types
 
 I practiced creating and typing objects:
-
+```ts
 let person: {
   name: string;
   age: number;
