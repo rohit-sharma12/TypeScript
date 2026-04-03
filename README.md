@@ -51,7 +51,7 @@ Example:
 
 let userName: string = "Rohit";
 let age: number = 21;
-
+```
 ## 3. Special Types
 
 I also learned the purpose of TypeScript’s special types:
@@ -67,6 +67,7 @@ Example:
 function error(msg: string): never {
   throw new Error(msg);
 }
+```
 
 ## 4. Basic Object Types
 
@@ -81,7 +82,7 @@ let person: {
   age: 21,
   isAdmin: false
 };
-
+```
 ⭐ Key Takeaways
 tsconfig.json controls TypeScript behavior and project setup
 Primitive types help write predictable and cleaner code
