@@ -48,7 +48,6 @@ I revised the core primitive types in TypeScript:
 
 Example:
 
-```ts
 let userName: string = "Rohit";
 let age: number = 21;
 
