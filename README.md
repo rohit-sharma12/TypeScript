@@ -89,3 +89,24 @@ Primitive types help write predictable and cleaner code
 Special types (void, never, unknown) add stronger safety
 Object typing helps maintain stable data structures
 Overall, TypeScript already feels more structured than plain JS
+
+## 5. Type Narrowing
+
+TypeScript intelligently narrows down the type of a variable based on conditions and checks.
+
+🔍 Example:
+```ts
+function printValue(value: string | number) {
+  if (typeof value === "string") {
+    console.log(value.toUpperCase());
+  } else {
+    console.log(value.toFixed(2));
+  }
+}
+```
+Techniques Learned:
+typeof narrowing
+instanceof narrowing
+Equality checks
+Truthiness checks
+Custom type predicates
