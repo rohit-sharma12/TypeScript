@@ -22,3 +22,10 @@ const user2: User = {
 
 //Error: cannot modify readonly property
 //user1.createdAt = new Date()
+
+
+type Count = { [k: string]: number };
+type Count1 = Record<"likes" | "viwes" | "comments", number>;
+
+const c1: Count = { whatever: 1 }
+const c2: Count = { likes: 143, views: 342, comments: 34 };
