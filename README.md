@@ -110,3 +110,30 @@ instanceof narrowing
 Equality checks
 Truthiness checks
 Custom type predicates
+
+## 📚 1. Arrays
+
+An array is an ordered list of values.
+Values may be numbers, strings, objects, or even other arrays.
+
+### ✅ Array Declaration
+```ts
+let numbers: number[] = [1, 2, 3];
+let names: string[] = ["Rohit", "Aman", "Sita"];
+let mixed: (string | number)[] = [1, "hello", 3];
+```
+
+✅ What is a Tuple?
+
+A fixed-length array where each element has a specific type.
+
+Syntax
+```ts
+let tuple: [string, number];
+Example
+let person: [string, number] = ["Rohit", 21];
+```
+Why Tuples?
+Perfect for small structured data
+Ensures strict ordering
+Example: response from API: [status, message]
