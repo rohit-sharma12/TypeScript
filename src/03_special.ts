@@ -10,5 +10,3 @@ function log(msg: string): void {
 function fail(msg: string): never {
     throw new Error(msg)
 }
-
-//DO NOT ANY -->> Try to ignore as much as posible

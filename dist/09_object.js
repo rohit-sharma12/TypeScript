@@ -1,29 +1,17 @@
+"use strict";
 const dish = {
     name: "Paneer",
     price: 90,
     isGood: true
-}
-
-let dishName: {
-    name: string;
-    price: number;
-    isValuable: boolean
-}
-
+};
+let dishName;
 dishName = {
     name: "Pasta",
     price: 89,
     isValuable: true
-}
-
-type dishName2 = {
-    name: string;
-    price: number;
-    ingrediants: string[]
-}
-
-const Pizza: dishName2 = {
+};
+const Pizza = {
     name: "Pizza",
     price: 299,
     ingrediants: ["cheese", "olives", "onions"]
-}
+};
