@@ -50,3 +50,45 @@ function makeSound(animal: Dog | Cat) {
         animal.meow();  // Cat only
     }
 }
+
+//created a custom type: 👍
+type ChaiOrder = {
+    type: string
+    sugar: Number
+}
+//This function checks whether obj matches the structure of ChaiOrder.
+function isChaiOrder(obj: any): obj is ChaiOrder {
+    return (
+        typeof obj === "object" &&
+        obj !== null &&
+        typeof obj.type === "string" &&
+        typeof obj.sugar === "number"
+    )
+}
+
+function serveOrder(item: ChaiOrder | string) {
+    if (isChaiOrder(item)) {
+        return `Serving ${item.type} chai with ${item.sugar} sugar`
+    }
+    return `Serving custom chai ${item}`
+}
+
+type MasalaChai = { type: 'masala', spicelevel: number };
+type GingerChai = { type: 'ginger', amount: number };
+type ElaichiChai = { type: 'elaichi', aroma: number };
+
+type Chai = MasalaChai | GingerChai | ElaichiChai;
+
+function MakeChai(order: Chai) {
+    switch (order.type) {
+        case "masala":
+            return `Masala chai`
+            break;
+        case "ginger":
+            return `Ginger chai`
+            break;
+        case "elaichi":
+            return `Elaichi chai`
+            break;
+    }
+}
