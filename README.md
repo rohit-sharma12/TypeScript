@@ -138,10 +138,6 @@ Perfect for small structured data
 Ensures strict ordering
 Example: response from API: [status, message]
 
-📘 TypeScript – Day 05 Learning Notes
-
-This document covers the TypeScript concepts learned today, including Union Types, Intersection Types, Void return types, Function Types, Interfaces, and Enums.
-
 🔹 1. Union Types (|)
 
 A union type allows a variable to store one of several types.
@@ -193,6 +189,7 @@ function showMessage(): void {
 Event handlers
 Logging functions
 Utility functions
+
 🔹 4. Function Types
 
 Function types allow us to define clean, strongly typed function signatures.
@@ -210,6 +207,7 @@ Useful for:
 Callbacks
 Reusable function contracts
 API services
+
 🔹 5. Interfaces
 
 Interfaces define the shape of an object.
@@ -230,6 +228,7 @@ interface Admin extends User {
 Great for large applications
 Can be extended
 Improve code structure
+
 🔹 6. Enums
 
 Enums define a group of named constants.
