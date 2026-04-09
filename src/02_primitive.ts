@@ -16,7 +16,7 @@ function yearToDay(years: number): number {
 //--> When working with 3rd party libraries that lack type definations.
 //--> DO NOT ANY -->> Try to ignore as much as posible
 
-let value:any = 'Rohit';
+let value: any = 'Rohit';
 value = 10
 value = ['anil']
 
@@ -25,5 +25,7 @@ value = ['anil']
 
 let value1: unknown = "Computer Science";
 
-
-
+value1 = ['rohit'];
+if (typeof  value1 === "string") {
+    console.log(value1.toUpperCase());
+}

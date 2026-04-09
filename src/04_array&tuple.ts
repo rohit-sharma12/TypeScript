@@ -12,4 +12,4 @@ let Data: ReadonlyArray<string> = ['AI/ML', 'WEB DEV', 'CLOUD']
 //collection of diffrent data types with fixed-length 💯
 let emp:[string, number, boolean, string] = ['Rohit', 22, true, 'WEB DEV']
 
-emp.push('noida');
+//emp.push('noida');
