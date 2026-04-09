@@ -137,3 +137,117 @@ Why Tuples?
 Perfect for small structured data
 Ensures strict ordering
 Example: response from API: [status, message]
+
+📘 TypeScript – Day 05 Learning Notes
+
+This document covers the TypeScript concepts learned today, including Union Types, Intersection Types, Void return types, Function Types, Interfaces, and Enums.
+
+🔹 1. Union Types (|)
+
+A union type allows a variable to store one of several types.
+
+✔ Syntax:
+```ts
+let value: string | number;
+✔ Example:
+let result: number | boolean;
+result = 10;
+result = true;
+```
+📌 Use Case:
+
+Useful when a variable or function argument can take multiple types (e.g., API response).
+
+🔹 2. Intersection Types (&)
+
+Intersection types combine multiple types into one.
+The resulting type must satisfy all combined types.
+
+✔ Example:
+```ts
+type A = { name: string };
+type B = { age: number };
+
+type Person = A & B;
+
+const p: Person = {
+  name: "Rohit",
+  age: 22,
+};
+```
+📌 Use Case:
+
+Useful for merging models or extending existing structure.
+
+🔹 3. void Type
+
+The void type is used when a function does not return anything.
+
+✔ Example:
+```ts
+function showMessage(): void {
+  console.log("Hello TypeScript");
+}
+```
+📌 Use Case:
+Event handlers
+Logging functions
+Utility functions
+🔹 4. Function Types
+
+Function types allow us to define clean, strongly typed function signatures.
+
+✔ Syntax:
+```ts
+type Add = (a: number, b: number) => number;
+✔ Example:
+const sum: Add = (x, y) => x + y;
+```
+📌 Use Case:
+
+Useful for:
+
+Callbacks
+Reusable function contracts
+API services
+🔹 5. Interfaces
+
+Interfaces define the shape of an object.
+They are scalable and support extension.
+
+✔ Basic Interface:
+```ts
+interface User {
+  name: string;
+  age: number;
+}
+✔ Extending an Interface:
+interface Admin extends User {
+  role: string;
+}
+```
+📌 Why Use Interfaces?
+Great for large applications
+Can be extended
+Improve code structure
+🔹 6. Enums
+
+Enums define a group of named constants.
+
+✔ Example:
+```ts
+enum Status {
+  SUCCESS = "success",
+  ERROR = "error",
+  PENDING = "pending",
+}
+
+let current: Status = Status.SUCCESS;
+```
+📌 Use Case:
+
+Useful for:
+
+User roles
+API response statuses
+Modes / options
