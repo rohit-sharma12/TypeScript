@@ -250,3 +250,65 @@ Useful for:
 User roles
 API response statuses
 Modes / options
+
+
+Today I explored Type Guards and the static keyword, two concepts that help write safer and better-structured TypeScript code.
+
+🔹 1. Type Guards
+
+Type Guards allow TypeScript to narrow down types within a conditional block.
+This ensures we perform operations only on the correct type.
+
+✅ Example (typeof narrowing)
+
+function checkValue(value: string | number) {
+  if (typeof value === "string") {
+    console.log(value.toUpperCase()); // string methods
+  } else {
+    console.log(value.toFixed(2)); // number methods
+  }
+}
+
+🔹 Other Type Guard Techniques
+
+typeof → for primitives (string, number, etc.)
+instanceof → for class-based objects
+Equality checks (===)
+Truthiness checks
+Custom type predicates\
+
+✅ Example (instanceof)
+```ts
+class User {}
+class Admin {}
+
+function checkRole(data: User | Admin) {
+  if (data instanceof Admin) {
+    console.log("Admin user");
+  } else {
+    console.log("Normal user");
+  }
+}
+```
+🔹 2. static Keyword in TypeScript
+
+The static keyword is used to define properties or methods that belong to the class itself, not instances.
+
+✅ Example
+```ts
+class MathUtils {
+  static add(a: number, b: number): number {
+    return a + b;
+  }
+}
+```
+
+// No need to create object
+```ts
+console.log(MathUtils.add(2, 3)); // 5
+```
+
+🔹 When to Use static?
+Utility/helper functions
+Shared logic across all instances
+Constants or configuration values
