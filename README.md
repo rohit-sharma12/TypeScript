@@ -312,3 +312,60 @@ console.log(MathUtils.add(2, 3)); // 5
 Utility/helper functions
 Shared logic across all instances
 Constants or configuration values
+
+🚀 Generics, keyof & Utility Types
+
+Today I explored some of the most powerful features in TypeScript that make code scalable, reusable, and type-safe.
+
+🔹 1. Generics — Write reusable code
+
+Generics allow us to create flexible functions without losing type safety.
+```ts
+function identity<T>(value: T): T {
+  return value;
+}
+```
+📌 One function → works with any type
+
+🔹 2. keyof — Safe object key access
+
+keyof ensures we only use valid object keys.
+```ts
+type User = {
+  name: string;
+  age: number;
+};
+
+function getValue(obj: User, key: keyof User) {
+  return obj[key];
+}
+```
+📌 Prevents invalid key access errors
+
+🔹 3. Utility Types — Built-in power tools
+
+TypeScript provides utility types to transform existing types easily.
+
+✅ Partial
+
+Makes all properties optional
+
+✅ Required
+
+Makes all properties required
+
+✅ Readonly
+
+Prevents modification
+
+✅ Pick
+
+Select specific properties
+
+⭐ Key Takeaways
+
+✔ Generics make code reusable and flexible
+✔ keyof ensures safe property access
+✔ Utility types simplify complex type transformations
+✔ TypeScript is becoming more powerful as I go deeper
+
