@@ -49,3 +49,37 @@ type UserData4 = {
 };
 
 type UserName = Pick<UserData4, "name" | "email">;
+
+//✅ 5. Omit<T, K>
+//👉 Remove specific properties
+type player = {
+    name: string;
+    age: number;
+    email: string;
+};
+
+type playerWithoutEmail = Omit<player, "email">;
+
+//✅ 9. Exclude<T, U>
+//👉 Remove types from union
+
+type T = string | number | boolean;
+
+type OnlyString = Exclude<T, number | boolean>;
+
+//✅ 10. Extract<T, U>
+//👉 Extract specific types
+
+type T2 = string | number | boolean;
+
+type OnlyNumber = Extract<T2, number>;
+
+//✅ 11. Record<K, T>
+//👉 Create object type with specific keys
+
+type Roles = "admin" | "user";
+
+const info: Record<Roles, string> = {
+    admin: "Rohit",
+    user: "Aman"
+};
