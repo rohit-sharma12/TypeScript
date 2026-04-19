@@ -369,3 +369,19 @@ Select specific properties
 ✔ Utility types simplify complex type transformations
 ✔ TypeScript is becoming more powerful as I go deeper
 
+🔹 2. Namespaces — Organizing Code
+
+Namespaces help in organizing code into logical groups, especially in large applications.
+
+✨ Example:
+```ts
+namespace UserUtils {
+  export function greet(name: string) {
+    return `Hello, ${name}`;
+  }
+}
+
+console.log(UserUtils.greet("Rohit"));
+```
+📌 Useful for structuring code and avoiding naming conflicts.
+
